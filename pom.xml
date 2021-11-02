@@ -29,7 +29,7 @@
                     </descriptorRefs>
                     <archive>
                         <manifest>
-                            <mainClass>diu.ulpgc.es.practica6umbralimagen.Interfaz</mainClass>
+                            <mainClass>diu.ulpgc.es.practica7paneldeslizable.Interfaz</mainClass>
                         </manifest>
                     </archive>
                 </configuration>

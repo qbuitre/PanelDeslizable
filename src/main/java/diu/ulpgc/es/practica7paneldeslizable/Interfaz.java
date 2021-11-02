@@ -403,16 +403,12 @@ public class Interfaz extends javax.swing.JFrame {
     private void imagenMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_imagenMenuActionPerformed
         int op = fc.showOpenDialog(this);
         if(op == JFileChooser.APPROVE_OPTION) {
-            if(file.getName().endsWith(".jpg") || file.getName().endsWith(".png")) {
                 file = fc.getSelectedFile();
                 updateScrollPane();
                 imgOr = Imgcodecs.imread(file.getPath());
                 img = (BufferedImage) HighGui.toBufferedImage(imgOr);
                 lienzo1.setImage(img);
                 updateRGB(imgOr, jScrollPane.getViewport().getViewPosition(), imageSize(new Dimension(img.getWidth(),img.getHeight()),jScrollPane.getViewport().getExtentSize()));
-            } else {
-                JOptionPane.showMessageDialog(this, "Sólo se pueden abrir archivos con extensión .jpg o .png");
-            }
         }
     }//GEN-LAST:event_imagenMenuActionPerformed
 
